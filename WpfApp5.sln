@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "WpfApp5\Store.csproj", "{021FEBC1-30D7-498E-A28A-C6AC5949846A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_MyJurnal", "Setup_MyJurnal\Setup_MyJurnal.vdproj", "{CE742A1C-FF31-451B-A266-A8E1567F0691}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{021FEBC1-30D7-498E-A28A-C6AC5949846A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021FEBC1-30D7-498E-A28A-C6AC5949846A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021FEBC1-30D7-498E-A28A-C6AC5949846A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021FEBC1-30D7-498E-A28A-C6AC5949846A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE742A1C-FF31-451B-A266-A8E1567F0691}.Debug|Any CPU.ActiveCfg = Release
+		{CE742A1C-FF31-451B-A266-A8E1567F0691}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FE6E0FC-54CC-452C-8344-546D72A2BB65}
+	EndGlobalSection
+EndGlobal

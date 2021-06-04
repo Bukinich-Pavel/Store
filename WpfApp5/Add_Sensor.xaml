@@ -1,0 +1,80 @@
+﻿<Window x:Class="Store.Add_Sensor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Store"
+        mc:Ignorable="d"
+        Title="Добавить" Height="500" Width="1000" MinWidth="1000" MinHeight="500" MaxWidth="1000" MaxHeight="500" Icon="/logo.png">
+    <Window.Resources>
+
+        <ItemsPanelTemplate x:Key="listPanelTemplate">
+            <WrapPanel MaxWidth="360"  />
+        </ItemsPanelTemplate>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC3C2C2" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!--фото-->
+        <Image x:Name="photo" HorizontalAlignment="Left" Height="300" Margin="39,51,0,0" VerticalAlignment="Top" Width="300" Source="/Без названия.png" Cursor="Hand" MouseLeftButtonUp="photo_MouseLeftButtonUp">
+        </Image>
+
+        <!--имя-->
+        <TextBlock HorizontalAlignment="Left" Margin="380,9,0,0" Text="Введите имя:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="wrName" HorizontalAlignment="Left" Margin="380,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="18" Background="#FFF0F0F0"/>
+
+        <!--напряжение-->
+        <TextBlock HorizontalAlignment="Left" Margin="380,81,0,0" Text="Напряжение:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="wrVolt" HorizontalAlignment="Left" Margin="380,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="18" Background="#FFF0F0F0"/>
+
+        <!--размер-->
+        <TextBlock HorizontalAlignment="Left" Margin="380,158,0,0" Text="Размер:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="wrSize" HorizontalAlignment="Left" Margin="380,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="18" Background="#FFF0F0F0"/>
+
+        <!--подключение-->
+        <TextBlock HorizontalAlignment="Left" Margin="380,238,0,0" Text="Подключение:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="wrConnect" HorizontalAlignment="Left" Margin="380,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="18" Background="#FFF0F0F0"/>
+
+        <!--добавить установку-->
+        <TextBlock HorizontalAlignment="Left" Margin="604,103,0,0" Text="Добавить установку:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="Ceh" HorizontalAlignment="Left" Margin="604,136,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Сex_SelectionChanged"/>
+        <ComboBox x:Name="Ust" HorizontalAlignment="Left" Margin="749,136,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="892,129,0,0" VerticalAlignment="Top" Height="35" Width="65" PreviewMouseLeftButtonUp="Button_PreviewMouseLeftButtonUp"/>
+
+
+        <ListBox x:Name="PerUst" 
+                 Margin="604,187,26,103"
+                 ItemsPanel="{StaticResource listPanelTemplate}" FontSize="16">
+            <ListBox.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFE2E2E2" Offset="1"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0"/>
+                </RadialGradientBrush>
+            </ListBox.Background>
+
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить" Click="MenuItem_Click"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+
+        </ListBox>
+
+        <!--выбор типа-->
+        <TextBlock HorizontalAlignment="Left" Margin="604,9,0,0" Text="Выбрать тип:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="Type" HorizontalAlignment="Left" Margin="604,42,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Type_SelectionChanged"/>
+        <ComboBox x:Name="SubType" HorizontalAlignment="Left" Margin="749,42,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SubType_SelectionChanged"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="880,404,0,0" VerticalAlignment="Top" Height="36" Width="70" Click="Button_Click_1"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="779,407,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="380,322,0,0" Text="Количество:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="wrExistence" HorizontalAlignment="Left" Margin="380,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="18" Background="#FFF0F0F0"/>
+
+    </Grid>
+</Window>
